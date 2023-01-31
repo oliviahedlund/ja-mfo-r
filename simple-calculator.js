@@ -31,22 +31,31 @@ app.post('/json', (req, res) => {
             x1 = req.body['Numbers']
             switch (req.body['NodeCommand']) { 
                 case 'Add':
-                    ans = x1 [0]
+                    ans = x1[0]
                     for (x2 = 1; x2 < x1.length; x2++) {
                         ans = ans + x1[x2] 
                     }
                     break
 
                 case 'Subtract': 
-                    ans = 'N/A'
+                    ans = x1[0]
+                    for (x2 = 1; x2 < x1.length; x2++) {
+                        ans = ans - x1[x2]
+                    }
                     break
 
                 case 'Multiply': 
-                    ans = 'N/A'
+                    ans = x1[0]
+                    for (x2 = 1; x2 < x1.length; x2++) {
+                        ans = ans * x1[x2]
+                    }
                     break
 
                 case 'Divide': 
-                    ans = 'N/A'
+                    ans = x1[0]
+                    for (x2 = 1; x2 < x1.length; x2++) {
+                        ans = ans / x1[x2]
+                    }
                     break
             }
 
