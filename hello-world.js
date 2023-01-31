@@ -4,13 +4,13 @@
 console.log("Hello from DVAD26 => 'Containers are cool!!!'")
 //print a compiled message on screen
 var courseName = 'DVAD26: Distributed Systems and Cloud Computing'
-console.log('Hello again from the course => ${courseName}')
+console.log(`Hello again from the course => ${courseName}`)
 //understand variable types: const vs let vs var //'const' can be declared and assigned only once
 //'let' can be declared only once but updated several times
 //'var' can be defined and updated several times, each time on its own scope
 // Correct usage
 const constItem = 10 
-console.log('constItem => ${constItem}')
+console.log(`constItem => ${constItem}`)
 //Incorrect usage => this will produce an error
 /*
 const constItem2
@@ -23,7 +23,7 @@ let x1
 console.log()
 for (x1 = 2; x1 < 5; x1++) {
     letItem2 = 'slices of blueberry cake'
-    console.log('letItem => ${letItem1} with ${x1.toString()} ${letItem2} !') 
+    console.log(`letItem => ${letItem1} with ${x1.toString()} ${letItem2} !`) 
 }
 //Incorrect usage => this will produce an error
 /*
@@ -42,12 +42,12 @@ function funcMyFunction(hrs) {
 var varItem1 = 'I love to drive'
 
 console.log()
-console.log('varItem => ${varItem1} but only up to ${funcMyFunction(1.5)} !')
+console.log(`varItem => ${varItem1} but only up to ${funcMyFunction(1.5)} !`)
 for (x1 = 2; x1 < 5; x1++) { 
     var varItem2 = 'minutes'
-    console.log('varItem => ${varItem1} but only up to ${x1.toString()} ${ varItem2} !')
+    console.log(`varItem => ${varItem1} but only up to ${x1.toString()} ${ varItem2} !`)
 }
-console.log('varItem => ${varItem1} but only up to ${funcMyFunction(5.5)} !')
+console.log(`varItem => ${varItem1} but only up to ${funcMyFunction(5.5)} !`)
 
 /*
 //Incorrect usage (semantic) => the value of varItem2 can be accessed outside its defined scope

@@ -22,4 +22,4 @@ app.post('/json', (req, res) => {
     res.json({ 'Message': 'JSON-Listener => OK!' }) 
 })
 
-app.listen(ipPort, console.log('Listening to ${ipAddress}:${ipPort} !!!'))
+app.listen(ipPort, console.log(`Listening to ${ipAddress}:${ipPort} !!!`))
