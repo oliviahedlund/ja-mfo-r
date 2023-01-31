@@ -1,0 +1,49 @@
+# kubectl create -f k8-deployment -2.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple -calculator -solution -deployment
+  namespace: default
+  labels:
+    app: simple -calculator -solution -deployment
+spec:
+  selector:
+    matchLabels:
+      app: simple -calculator -solution -deployment
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: simple -calculator -solution -deployment
+    spec:
+      containers:
+        - name: simple -calculator -solution -deployment
+          image: simple -calculator -solution -image:v1
+          imagePullPolicy: Never
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - name: nodejs -port
+              containerPort: 3000
+              protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple -calculator -solution -service
+  namespace: default
+spec:
+  selector:
+    app: simple -calculator -solution -deployment
+  type: NodePort
+  ports:
+    - targetPort: nodejs -port
+      protocol: TCP
+      port: 3000

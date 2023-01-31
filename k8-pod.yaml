@@ -1,0 +1,19 @@
+# kubectl create -f k8-pod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple -calculator -pod -3
+  namespace: default
+  labels:
+    app: simple -calculator -pod -3
+
+spec:
+  containers:
+    - name: simple -calculator -pod -3
+      image: simple -calculator -image:v2
+      imagePullPolicy: Never
+      ports:
+        - name: nodejs -port
+          containerPort: 3000
+          protocol: TCP
